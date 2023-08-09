@@ -1,11 +1,10 @@
 import "./App.css";
 import { ReactTerminal } from "react-terminal";
-import resume from "./assets/resume.pdf";
 
 const Links = (
   <span>
     Links{": "}
-    <a target="_open" href={resume}>
+    <a target="_open" href={"https://profile.indeed.com/p/jordanc-3r7ye7q"}>
       Resume
     </a>{" "}
     |{" "}
@@ -25,6 +24,14 @@ const Links = (
 
 const WelcomeMessage = (
   <span>
+    <img
+      src="/photo.jpg"
+      alt="Jordan Cole"
+      width="100"
+      height="100"
+      style={{ borderRadius: "50px" }}
+    />{" "}
+    <br />
     <br />
     Jordan Cole <br />
     <a href="mailto:contact@jordancole.me">contact@jordancole.me</a> <br />
@@ -40,8 +47,6 @@ const HelpCommand = (
     <br />
     <span style={{ color: "rgb(66, 165, 245)" }}>about</span> - Check out my
     interests & hobbies <br />
-    <span style={{ color: "rgb(66, 165, 245)" }}>projects</span> - Look at the
-    projects I work on <br />
     <span style={{ color: "rgb(66, 165, 245)" }}>contact</span> - Need work
     done? Type this to contact me <br />
     <br />
@@ -69,10 +74,10 @@ const AboutCommand = (
       <a target="_open" href="https://sevenhillstechnology.com/">
         Seven Hills Technology
       </a>{" "}
-      where I consult & program for various clients creating Mobile App,
-      Websites, and API's using a multitude of frameworks & languages such as
-      React, React Native, Angular, Node.JS, PHP, and .NET. Some of my interests
-      include Bowling, Gaming, and Traveling.
+      as a Tech Lead where I consult & program for various clients creating
+      Mobile Apps, Websites, and API's using a multitude of frameworks &
+      languages such as React, React Native, Angular, Node.JS, PHP, and .NET.
+      Some of my interests include Bowling, Gaming, and Traveling.
     </span>
     <br />
   </span>
@@ -91,7 +96,6 @@ function App() {
   const commands = {
     help: HelpCommand,
     about: AboutCommand,
-    projects: <span></span>,
     contact: Contact,
   };
 
